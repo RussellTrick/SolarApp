@@ -9,5 +9,5 @@ The intended usecase is quite niche as one needs to have a solar panel array and
 
 Users need an .env file which needs the following variables
 
-`API_KEY`
+`API_KEY`  
 `City`
