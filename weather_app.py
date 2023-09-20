@@ -6,13 +6,14 @@ from datetime import datetime, timedelta
 load_dotenv()
 
 api_key = os.getenv('API_KEY')
-city = os.getenv('CITY')
+latitude = os.getenv('LATITUDE')
+longitude = os.getenv('LONGITUDE')
 
 threshold = 30
 counter = 0
 
-# Construct the API URL
-api_url = f'http://api.weatherapi.com/v1/forecast.json?key={api_key}&q={city}&days=2'
+# Construct the API URL with latitude and longitude
+api_url = f'http://api.weatherapi.com/v1/forecast.json?key={api_key}&q={latitude},{longitude}&days=2'
 
 # Make the API Request
 response = requests.get(api_url)
